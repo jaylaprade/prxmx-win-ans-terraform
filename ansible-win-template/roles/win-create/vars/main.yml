@@ -1,0 +1,25 @@
+# vars.yml 
+---
+
+# PVE Template Provisioning Variables
+template_name: 2019DC-tpl
+pve_storage_id: local-zfs 
+vm_cores: 2
+vm_sockets: 2
+vm_memory_mb: 4096 
+vm_os_type: win10
+bridge: vmbr0
+# vm_os_type must be valid value per https://pve.proxmox.com/wiki/Qemu/KVM_Virtual_Machines
+drive_size_gb: 40
+start_at_boot: no
+os_iso_location: local:iso/17763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us_117763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us_1.iso
+
+
+# Unattend.xml template variables:
+deploy_image: 'Windows Server 2019 SERVERSTANDARDCORE'
+# Applicable 2019 options for deploy_image: 
+# Windows Server 2019 SERVERDATACENTER, Windows Server 2019 SERVERDATACENTERCORE,
+# Windows Server 2019 SERVERSTANDARD, Windows Server 2019 SERVERSTANDARDCORE
+vm_admin_pass: root@pam
+vm_time_zone: 'Pacific Standard Time'
+org_name: '192.168.1.25'
